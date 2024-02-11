@@ -1,8 +1,10 @@
 # This program will check if someone is eligible for blood donation (i.e. age 16+ and weight 50kg and over)
 keep_asking = True
+AGE_MIN = 16
+WEIGHT_MIN = 50
 
 def check(a, w):
-    if a > 15 and w > 49:
+    if a >= AGE_MIN and w >= WEIGHT_MIN:
         return ""
     else:
         return " not"
