@@ -8,7 +8,17 @@ names = []
 
 # Get the name and value of the prize and ensure validity.
 print("Welcome to my raffle program!")
-prize_name = input("Please input the name of the prize here. ")
+ask_prize = True
+while ask_prize:
+    prize_spaces = True
+    prize_name = input("Please input the name of the prize here. ")
+    for i in range(len(prize_name)):
+        if prize_name[i] != " ":
+            prize_spaces = False
+    if prize_spaces == False:
+        ask_prize = False
+    else:
+        print("Please pick a proper prize name.")
 
 ask_value = True
 while ask_value:
